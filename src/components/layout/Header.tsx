@@ -42,7 +42,7 @@ const Header = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
-          {NAV_LINKS.map((link) => (
+          {NAV_LINKS.map((link: { label: string; href: string }) => (
             <Link
               key={link.label}
               href={link.href}
@@ -78,7 +78,7 @@ const Header = () => {
             className="absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 md:hidden"
           >
             <div className="flex flex-col px-6 py-6 pb-8 gap-4">
-              {NAV_LINKS.map((link) => (
+              {NAV_LINKS.map((link: { label: string; href: string }) => (
                 <Link
                   key={link.label}
                   href={link.href}
