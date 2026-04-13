@@ -23,19 +23,19 @@ const Header = () => {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/80 backdrop-blur-md shadow-sm py-3"
-          : "bg-transparent py-5"
+          ? "bg-white/90 backdrop-blur-md shadow-sm py-3"
+          : "bg-transparent py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="#home" className="flex-shrink-0 flex items-center gap-2">
+        {/* Logo - Ampliado y Minimalista */}
+        <Link href="/" className="flex-shrink-0 flex items-center gap-2 group">
           <Image
             src="/Logo_Akovix.svg"
             alt="Akovix Technologies Logo"
-            width={140}
-            height={76}
-            className="w-auto h-12 md:h-14"
+            width={200}
+            height={90}
+            className="w-auto h-14 md:h-16 drop-shadow-sm transition-transform duration-500 group-hover:scale-105"
             priority
           />
         </Link>
@@ -46,17 +46,17 @@ const Header = () => {
             <Link
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-gray-700 hover:text-brand-600 transition-colors"
+              className="text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors"
             >
               {link.label}
             </Link>
           ))}
-          <a
-            href="#contact"
-            className="px-5 py-2.5 rounded-full bg-black text-white text-sm font-medium hover:bg-gray-800 transition-all shadow-md hover:shadow-lg"
+          <Link
+            href="/contacto"
+            className="px-6 py-2.5 rounded-full bg-black text-white text-sm font-medium hover:bg-gray-800 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
           >
             Contáctanos
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile menu button */}
@@ -88,13 +88,13 @@ const Header = () => {
                   {link.label}
                 </Link>
               ))}
-              <a
-                href="#contact"
+              <Link
+                href="/contacto"
                 onClick={() => setMobileMenuOpen(false)}
                 className="mt-4 text-center px-5 py-3 rounded-xl bg-brand-600 text-white font-medium shadow-md"
               >
                 Solicitar Cotización
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}

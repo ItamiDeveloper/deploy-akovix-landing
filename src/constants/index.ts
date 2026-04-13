@@ -1,8 +1,7 @@
 export const NAV_LINKS = [
-  { label: "Inicio", href: "#home" },
-  { label: "Servicios", href: "#services" },
-  { label: "Nosotros", href: "#about" },
-  { label: "Tecnologías", href: "#tech" },
+  { label: "Inicio", href: "/" },
+  { label: "Servicios", href: "/servicios" },
+  { label: "Nosotros", href: "/nosotros" },
 ];
 
 export const SERVICES = [
