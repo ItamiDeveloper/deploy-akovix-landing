@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Hero = () => {
-  const floatAnimation = {
+  const floatAnimation: any = {
     y: [0, -15, 0],
     transition: {
       duration: 4,
@@ -101,7 +101,7 @@ const Hero = () => {
               />
 
               {/* Floating UI Cards */}
-              <motion.div className="z-20 absolute top-[15%] left-[5%] bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4 border border-gray-100" animate={floatAnimation}>
+              <motion.div className="z-20 absolute top-[15%] left-[5%] bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4 border border-gray-100" animate={floatAnimation as any}>
                 <div className="bg-brand-100 p-3 rounded-lg"><Code2 className="text-brand-600" /></div>
                 <div>
                   <div className="text-sm font-bold text-gray-800">Clean Architecture</div>
@@ -109,7 +109,7 @@ const Hero = () => {
                 </div>
               </motion.div>
 
-              <motion.div className="z-20 absolute bottom-[25%] right-[5%] bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4 border border-gray-100" animate={{...floatAnimation, transition: {duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1}}}>
+              <motion.div className="z-20 absolute bottom-[25%] right-[5%] bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4 border border-gray-100" animate={{...floatAnimation, transition: {duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1}} as any}>
                 <div className="bg-brand-900 p-3 rounded-lg"><Smartphone className="text-white" /></div>
                 <div>
                   <div className="text-sm font-bold text-gray-800">App Development</div>
@@ -117,11 +117,11 @@ const Hero = () => {
                 </div>
               </motion.div>
               
-              <motion.div className="z-20 absolute top-[40%] right-[10%] bg-brand-500 p-4 rounded-2xl shadow-brand-500/30 shadow-xl" animate={{...floatAnimation, transition: {duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2}}}>
+              <motion.div className="z-20 absolute top-[40%] right-[10%] bg-brand-500 p-4 rounded-2xl shadow-brand-500/30 shadow-xl" animate={{...floatAnimation, transition: {duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2}} as any}>
                 <Cpu className="text-white w-8 h-8" />
               </motion.div>
 
-              <motion.div className="z-20 absolute bottom-[15%] left-[15%] bg-white p-4 rounded-2xl shadow-xl border border-gray-100" animate={{...floatAnimation, transition: {duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5}}}>
+              <motion.div className="z-20 absolute bottom-[15%] left-[15%] bg-white p-4 rounded-2xl shadow-xl border border-gray-100" animate={{...floatAnimation, transition: {duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5}} as any}>
                 <Layers className="text-brand-400 w-8 h-8" />
               </motion.div>
 
